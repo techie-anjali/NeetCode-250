@@ -1,0 +1,23 @@
+
+217. Contains Duplicate
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+any-koi bhi elemt ek baar se jyada aaye
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+   
+        
+        HashSet<Integer> set = new HashSet<>();
+        
+        for(int i = 0; i < nums.length; i++){
+            
+            if(set.contains(nums[i])){   // if already present
+                return true;            // duplicate found
+            }
+            
+            set.add(nums[i]);           // otherwise add to set
+        }
+        
+        return false;   // no duplicate found
+    }
+}
